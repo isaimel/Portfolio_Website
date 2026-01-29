@@ -34,7 +34,7 @@ const categories = ["merch", "ads", "graphics", "personal"];
     });
 
     function random_append(container, node) {
-        if (Math.random() < 0.5 && container.firstChild) {
+        if (Math.random() < 0.5) {
             container.insertBefore(node, container.firstChild);
         } else {
             container.appendChild(node);

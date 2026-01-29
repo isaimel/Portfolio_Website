@@ -35,7 +35,7 @@ body{
 #portfolio_scroll{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2rem 24rem 2rem;
+    grid-template-rows: 2rem 28rem 2rem;
     gap: .7rem;
     box-sizing: border-box;
     justify-content: center;
