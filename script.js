@@ -8,7 +8,7 @@ const categories = ["merch", "ads", "graphics", "personal"];
         categoryDivs[cat] = document.getElementById(cat);
     });
 
-    fetch("assets/images.json")
+    fetch("https://raw.githubusercontent.com/isaimel/Portfolio_Website/refs/heads/main/assets/images.json?token=GHSAT0AAAAAADUDN6266TTN7SKOL3OXN4UQ2L3BTSA")
         .then(res => res.json())
         .then(data => {
 
@@ -31,7 +31,7 @@ const categories = ["merch", "ads", "graphics", "personal"];
 
         })
         .catch(err => {
-            console.error("Failed to load portfolio.json", err);
+            console.error("Failed to load images.json", err);
     });
 
     function portfolio_tab_functionality() {
