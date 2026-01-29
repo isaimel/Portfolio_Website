@@ -87,8 +87,8 @@ body{
     width: auto;
     transition: ease-in-out .2s;
     background-color: white;
-
 }
+
 #portfolio_preview img:hover{
     transform: scale(1.08);
 }
