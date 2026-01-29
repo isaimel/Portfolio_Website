@@ -52,45 +52,29 @@ body{
     overflow: hidden;
 }
 #portfolio_preview{
-    background-color: rgb(163, 94, 228);
-}
-#portfolio_preview div{
     display: flex;
     overflow-x: auto;
-    gap: 1.2rem;
-    /* -webkit-mask-image: linear-gradient(
-        to right,
-        transparent 0%,
-        black 4%,
-        black 96%,
-        transparent 100%
-    );
-    mask-image: linear-gradient(
-        to right,
-        transparent 0%,
-        black 4%,
-        black 96%,
-        transparent 100%
-    );
-    -ms-overflow-style: none; */
-    scrollbar-width: none;
-    align-items: center;
     overflow-y: hidden;
+    background-color: rgb(163, 94, 228);
+    width: 100%;
+    height: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
-#portfolio_preview::-webkit-scrollbar { 
+#portfolio_preview div{
+    display: inline-block;
+    gap: 1.2rem;
+    align-items: center;
+    padding: 0rem 1rem;
+    box-sizing: border-box;
+}
+#portfolio_preview div::-webkit-scrollbar { 
     display: none;
 }
-
-#portfolio_preview img{
-    display: block;
-    height: 85%;
+#portfolio_preview div img{
+    height: 80%;
     width: auto;
-    transition: ease-in-out .2s;
     background-color: white;
-}
-
-#portfolio_preview img:hover{
-    transform: scale(1.08);
 }
 #buzzword_list {
     display: grid;
@@ -102,6 +86,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: ease-in-out .1s;
 }
 #explore_portfilio_button{
     grid-row: 3;

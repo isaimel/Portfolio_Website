@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const categories = ["merch", "ads", "graphics", "personal"];
-    const maxImagesPerCategory = 20;
+    const maxImagesPerCategory = 2;
     const allDiv = document.getElementById("all");
     const categoryDivs = {};
 
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         categoryDivs[cat] = document.getElementById(cat);
     });
 
-    const fileExtensions = ["jpg", "jpeg", "png"];
+    const fileExtensions = ["jpg", "jpeg", "png", "gif"];
 
     categories.forEach(cat => {
         const catDiv = categoryDivs[cat];
