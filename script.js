@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const categories = ["merch", "ads", "graphics", "personal"];
-    const maxImagesPerCategory = 2;
+    const maxImagesPerCategory = 15;
     const allDiv = document.getElementById("all");
     const categoryDivs = {};
 
