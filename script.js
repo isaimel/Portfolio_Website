@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const categories = ["merch", "ads", "graphics", "personal"];
-    const maxImagesPerCategory = 15;
+const categories = ["merch", "ads", "graphics", "personal"];
     const allDiv = document.getElementById("all");
     const categoryDivs = {};
 
@@ -9,29 +8,30 @@ document.addEventListener("DOMContentLoaded", () => {
         categoryDivs[cat] = document.getElementById(cat);
     });
 
-    const fileExtensions = ["jpg", "jpeg", "png", "gif"];
+    fetch("assets/images.json")
+        .then(res => res.json())
+        .then(data => {
 
-    categories.forEach(cat => {
-        const catDiv = categoryDivs[cat];
+            categories.forEach(cat => {
+                const catDiv = categoryDivs[cat];
+                const files = data[cat] || [];
 
-        for (let i = 1; i <= maxImagesPerCategory; i++) {
+                files.forEach(file => {
+                    const img = new Image();
+                    img.src = `assets/${cat}/${file}`;
+                    img.alt = `${cat} image`;
+                    img.loading = "lazy";
 
-            fileExtensions.forEach(ext => {
-                const url = `assets/${cat}/img${i}.${ext}`;
-                const img = new Image();
-                img.src = url;
-                img.alt = `${cat} ${i}`;
-                img.loading = "lazy";
-
-                img.onload = () => {
-                    if (catDiv) catDiv.appendChild(img);
-                    if (allDiv) allDiv.appendChild(img.cloneNode());
-                };
-
-                img.onerror = () => {
-                };
+                    img.onload = () => {
+                        if (catDiv) catDiv.appendChild(img);
+                        if (allDiv) allDiv.appendChild(img.cloneNode());
+                    };
+                });
             });
-        }
+
+        })
+        .catch(err => {
+            console.error("Failed to load portfolio.json", err);
     });
 
     function portfolio_tab_functionality() {
