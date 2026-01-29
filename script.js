@@ -7,8 +7,7 @@ const categories = ["merch", "ads", "graphics", "personal"];
     categories.forEach(cat => {
         categoryDivs[cat] = document.getElementById(cat);
     });
-
-    fetch("https://raw.githubusercontent.com/isaimel/Portfolio_Website/refs/heads/main/assets/images.json?token=GHSAT0AAAAAADUDN6266TTN7SKOL3OXN4UQ2L3BTSA")
+    fetch("https://raw.githubusercontent.com/isaimel/Portfolio_Website/main/assets/images.json")
         .then(res => res.json())
         .then(data => {
 
@@ -23,8 +22,8 @@ const categories = ["merch", "ads", "graphics", "personal"];
                     img.loading = "lazy";
 
                     img.onload = () => {
-                        if (catDiv) catDiv.appendChild(img);
-                        if (allDiv) allDiv.appendChild(img.cloneNode());
+                        random_append(catDiv, img);
+                        random_append(allDiv, img.cloneNode());
                     };
                 });
             });
@@ -33,6 +32,14 @@ const categories = ["merch", "ads", "graphics", "personal"];
         .catch(err => {
             console.error("Failed to load images.json", err);
     });
+
+    function random_append(container, node) {
+        if (Math.random() < 0.5 && container.firstChild) {
+            container.insertBefore(node, container.firstChild);
+        } else {
+            container.appendChild(node);
+        }
+}
 
     function portfolio_tab_functionality() {
         const tabs = document.getElementById("buzzword_list").querySelectorAll("span");
