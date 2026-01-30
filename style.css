@@ -105,6 +105,9 @@ body{
     color: white;
     padding-top: .2rem;
 }
+#contact_me{
+    text-align: center;
+}
 #contact_info{
     display: flex;
     justify-content: space-around;
@@ -112,15 +115,6 @@ body{
 #contact_info div{
     text-align: center;
 }
-#contact_info div a:link{
-    text-align: white;
-}
-#contact_info div a:visited{
-    text-align: white;
-}
-#contact_info div a:hover{
-    text-align: white;
-}
-#contact_info div a:active{
-    text-align: white;
+#contact_info div a {
+    color: white;
 }
