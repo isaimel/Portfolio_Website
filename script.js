@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-const categories = ["merch", "ads", "graphics", "personal"];
-    const allDiv = document.getElementById("all");
+const categories = ["merch", "ads", "graphics", "personal", "traditional"];
+    // const allDiv = document.getElementById("all");
     const categoryDivs = {};
 
     categories.forEach(cat => {
@@ -23,7 +23,7 @@ const categories = ["merch", "ads", "graphics", "personal"];
 
                     img.onload = () => {
                         random_append(catDiv, img);
-                        random_append(allDiv, img.cloneNode());
+                        // random_append(allDiv, img.cloneNode());
                     };
                 });
             });
