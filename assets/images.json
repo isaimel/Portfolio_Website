@@ -3,5 +3,5 @@
   "ads": ["img1.png","img2.png","img3.png","img4.png","img5.png","img6.png","img7.png"],
   "graphics": ["img1.png","img2.png","img3.png","img4.png","img5.png","img6.png","img7.png", "img8.png"],
   "personal": ["img1.jpg","img2.gif", "img3.png", "img4.png", "img5.jpg", "img6.gif"],
-  "traditional": ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg", "img6.jpg", "img7.jpg", "img8.jpg", "img9.jpg", "img10.jpg", "img11.jpg", "img12.jpg", "img13.jpg", "img14.jpg", "img15.jpg", "img16.jpg", "img17.jpg", "img18.jpg"]
+  "traditional": ["img1.png", "img2.png", "img3.png", "img4.png", "img5.png", "img6.png", "img7.png", "img8.png", "img9.png", "img10.png", "img11.png", "img12.png", "img13.png", "img14.png", "img15.png", "img16.png", "img17.png", "img18.png", "img19.png"]
 }
