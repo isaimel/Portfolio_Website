@@ -20,10 +20,8 @@ const categories = ["merch", "ads", "graphics", "personal", "traditional"];
                     img.alt = `${cat} image`;
                     img.loading = "lazy";
                     console.log(cat);
-
-                    img.onload = () => {
-                        random_append(catDiv, img);
-                    };
+                    
+                    catDiv.appendChild(img)
                 });
             });
 
@@ -31,14 +29,6 @@ const categories = ["merch", "ads", "graphics", "personal", "traditional"];
         .catch(err => {
             console.error("Failed to load images.json", err);
     });
-
-    function random_append(container, node) {
-        if (Math.random() < 0.5) {
-            container.insertBefore(node, container.firstChild);
-        } else {
-            container.appendChild(node);
-        }
-}
 
     function portfolio_tab_functionality() {
         const tabs = document.getElementById("buzzword_list").querySelectorAll("span");
