@@ -19,6 +19,7 @@ const categories = ["merch", "ads", "graphics", "personal", "traditional"];
                     img.src = `assets/${cat}/${file}`;
                     img.alt = `${cat} image`;
                     img.loading = "lazy";
+                    console.log(cat);
 
                     img.onload = () => {
                         random_append(catDiv, img);
