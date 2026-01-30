@@ -2,6 +2,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
 }
 .lim_width{
     width: 90vw;
@@ -98,7 +99,28 @@ body{
 }
 #footer{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(163, 94, 228);
+    color: white;
+    padding-top: .2rem;
 }
-#contact_me{
-    
+#contact_info{
+    display: flex;
+    justify-content: space-around;
+}
+#contact_info div{
+    text-align: center;
+}
+#contact_info div a:link{
+    text-align: white;
+}
+#contact_info div a:visited{
+    text-align: white;
+}
+#contact_info div a:hover{
+    text-align: white;
+}
+#contact_info div a:active{
+    text-align: white;
 }
