@@ -61,7 +61,7 @@ const categories = ["merch", "ads", "graphics", "personal", "traditional"];
                 activateTab(tab);
             });
 
-            if (tab.innerText.trim().toLowerCase() == "all") {
+            if (tab.innerText.trim().toLowerCase() == "merch") {
                 activateTab(tab);
             }
         });
