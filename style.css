@@ -103,7 +103,7 @@ body{
     justify-content: center;
     background-color: rgb(163, 94, 228);
     color: white;
-    padding-top: .2rem;
+    padding: .6rem 0rem;
 }
 #contact_me{
     text-align: center;
